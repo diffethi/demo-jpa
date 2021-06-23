@@ -1,6 +1,7 @@
 package fr.diginamic;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,8 +21,8 @@ public class IntegrationRecensement {
         List<String> lines = new ArrayList<>();
 
 
-        Path pathCible = Paths.get(lines);
-        Files.read(pathCible, lines);
+        Path pathCible = Paths.get(String.valueOf(lines));
+        Files.readAllLines(pathCible, (Charset) lines);
 
 
 
